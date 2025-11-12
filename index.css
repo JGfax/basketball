@@ -42,12 +42,10 @@ a {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  font-size: x-large;
+  margin-left: -35px;
 }
 
-a:hover {
-  color: var(--cor-primaria);
-  text-decoration: underline;
-}
 
 label {
     display: absolute;
@@ -86,7 +84,9 @@ form {
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-left: 600px;
+    margin-left: 1000px;
+    width: 815px;
+    margin-top: -35px;
 }
 
 button {
@@ -106,7 +106,7 @@ button {
 
 .menu {
         background-color: var(--cor-destaque); /* Cor de fundo escura */
-        padding: 10px 30px; /* Espaçamento interno */
+        padding: 5px 5px; /* Espaçamento interno */
         display: flex; /* Usa flexbox para alinhar os elementos */
         justify-content: space-between; /* Espaça os elementos ao longo do eixo principal */
         align-items: center; /* Alinha verticalmente os itens */
@@ -114,11 +114,7 @@ button {
         width: 100%; /* Faz o menu ocupar toda a largura da tela */
         margin-top: -50px;
         }
-        .menu h2 {
-        margin: -5px; /* Remove a margem do título */
-        font-size: 20px; /* Define o tamanho da fonte */
-        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-        }
+    
 
         .menu ul {
         list-style: none; /* Remove os marcadores da lista */
@@ -134,4 +130,6 @@ button {
         .menu ul li a {
         color: white; /* Define a cor do texto */
         text-decoration: none; /* Remove sublinhado dos links */
+         font-size: large;
+  margin-left: -35px;
         }
