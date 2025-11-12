@@ -1,5 +1,5 @@
-create database biblioteca;
-use biblioteca;
+create database basquete;
+use basquete;
 
 create table usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,

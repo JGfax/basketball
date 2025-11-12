@@ -6,19 +6,34 @@
   <link rel="stylesheet" href="index.css">
 
 </head>
-<body>
-  <h2>Login</h2>
+<body> 
+
+  <!-- Formulário de login -->
+
+  <h2>Formulário</h2>
   <form action="enviar.php" method="POST">
-    <label>Nome:</label><br>
-    <input type="text" name="nome" required><br>
 
-    <label>Senha:</label><br>
-    <input type="password" name="senha" required><br>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br><br>
+    <label>Equipe:</label><br>
+    <input type="text" name="equipe" required><br>
 
+    <label>Jogador:</label><br>
+    <input type="text" name="jogador" required><br>
+
+    <label>Pontos por partida:</label><br>
+    <input type="number" name="pontos" required><br>
+
+     <label>Assistência por partida:</label><br>
+    <input type="number" name="assistencia" required><br>
+
+     <label>Rebotes por partida:</label><br>
+    <input type="number" name="rebotes" required><br>
     <button type="submit">Cadastrar</button>
+
   </form>
+
+
+
+
 </body>
 </html>
