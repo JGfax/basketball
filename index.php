@@ -31,14 +31,12 @@ $result = $conn->query($sql);
 
 </header>
 
-
-
   <!-- Formulário de login -->
 
-  <h2>Formulário</h2>
+  
+
   <form action="enviar.php" method="POST">
-
-
+    <h2>Cadastro de Atletas</h2>
     <label>Equipe:</label><br>
     <select id="equipe" name="equipe" required> 
        <?php while ($row = $result->fetch_assoc()): ?>                   <!-- Loop para preencher as opções do select -->
@@ -64,8 +62,6 @@ $result = $conn->query($sql);
 
     <button type="submit">Cadastrar</button>
   </form>
-
-
 
 
 </body>

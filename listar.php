@@ -18,7 +18,7 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
 
           <nav class="menu">
                     <ul>
-                        <li><a href="index.php">Cadastro &nbsp |</a></li>
+                        <li><a href="index.php">Cadastro de Atletas</a></li>
                     </ul>
               </nav>
 <br>
