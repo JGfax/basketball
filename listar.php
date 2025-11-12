@@ -27,7 +27,7 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
 
   <table border="1" cellpadding="8">
     <tr>
-      <th>ID</th>
+      <th>ID Atleta</th>
       <th>Nome</th>
       <th>Pontuação</th>
       <th>Assistências</th>
