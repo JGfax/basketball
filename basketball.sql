@@ -17,9 +17,9 @@ CREATE TABLE atletas (
 );
 
 -- Inserir Equipes
-INSERT INTO equipes (nome) VALUES
-('Golden State Warriors'),
-('Los Angeles Lakers'),
-('LA Clippers'),
-('Phoenix Suns' ),
-('Sacramento Kings' );
+INSERT INTO equipes (id_equipe, nome) VALUES
+('1','Golden State Warriors'),
+('2','Los Angeles Lakers'),
+('3','LA Clippers'),
+('4','Phoenix Suns' ),
+('5','Sacramento Kings' );
