@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 
           <nav class="menu">
                     <ul>
-                        <li><a href="listar.php">Lista de Atletas &nbsp |</a></li>
+                        <li><a href="listar.php">Lista de Atletassssssss &nbsp |</a></li>
                     </ul>
               </nav>
 
