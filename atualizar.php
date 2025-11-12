@@ -1,7 +1,6 @@
 <?php
-include 'conexao.php'; // Inclui a conexão
+include 'conexao.php';
 
-// Verifica se os dados foram enviados pelo formulário
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
     $id = $_POST['id'];
     $nome = $_POST['nome'];
@@ -9,21 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
     $assistencias = $_POST['assistencias'];
     $rebotes = $_POST['rebotes'];
 
-    // Atualiza os dados do cliente no banco
-    $sql = "UPDATE atletas SET nome = ?, pontos = ? assistencias = ? rebotes = ? WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $nome, $pontos, $assistencias, $rebotes);
+    $sql = "UPDATE atletas SET nome = ?, pontos = ?, assistencias = ?, rebotes = ? WHERE id = ?";
+    $stmt = $pdo->prepare($sql);
 
-    if ($stmt->execute()) {
-        echo "Dados atualizados com sucesso!";
-        header('Location: listar.php'); // Redireciona para a lista de usuários
+    if ($stmt->execute([$nome, $pontos, $assistencias, $rebotes, $id])) {
+        echo "Atleta atualizado com sucesso!";
+        header('Location: listar.php');
     } else {
-        echo "Erro ao atualizar os dados: " . $stmt->error;
+        echo "Erro ao atualizar atleta.";
     }
 } else {
     echo "Dados não recebidos corretamente.";
 }
-
-// Fecha a conexão
-$conn->close();
 ?>
