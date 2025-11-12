@@ -18,29 +18,17 @@ $result = $conn->query($sql);
 
 <header>
   
-<!-- LOGO -->
 
-          <div class="logo">BASKET<span>BALL</span></div>
   
 <!-- MENU HAMBURGUER-->
 
           <nav class="menu">
-                <div class="hamburger" onclick="toggleMenu()">☰</div>
                     <ul>
-                        <li><a href="index.html">Home &nbsp |</a></li>
-                        <li><a href="servicos.html">Serviços &nbsp |</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="listar.php">Lista de Atletas &nbsp |</a></li>
                     </ul>
               </nav>
 
-<!-- MENU MOBILE-->
 
-            <div class="mobile-menu" id="mobileMenu">
-              <a href="#">Home</a>
-              <a href="#">Sobre</a>
-              <a href="#">Serviços</a>
-              <a href="#">Contato</a>
-            </div>
 </header>
 
         <script>

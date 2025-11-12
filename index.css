@@ -13,15 +13,10 @@
 }
 
 body {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 100vw;
-    height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--cor-fundo-claro);
     color: var(--cor-texto-escuro);
     line-height: 1.6;
-    padding: 20px;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -71,6 +66,17 @@ input[type="text"], input[type="number"]{
     padding: 30px;
     width: 700px;
 }
+
+select {
+    border-radius: 10px;
+    color: var(--cor-texto-escuro);
+    background-color: rgb(255, 255, 255);
+    outline: none; 
+    border: 2px solid var(--cor-primaria);
+    padding: 30px;
+    width: 700px;
+}
+
 form {
     border-radius: 16px;
     padding: 50px;
@@ -94,3 +100,37 @@ button {
     margin-top: 50px;
     width: 450px;
 }
+
+
+
+.menu {
+        background-color: rgb(64, 121, 0); /* Cor de fundo escura */
+        padding: 10px 30px; /* Espaçamento interno */
+        display: flex; /* Usa flexbox para alinhar os elementos */
+        justify-content: space-between; /* Espaça os elementos ao longo do eixo principal */
+        align-items: center; /* Alinha verticalmente os itens */
+        color: white; /* Cor do texto */
+        width: 100%; /* Faz o menu ocupar toda a largura da tela */
+        margin-top: -50px;
+        }
+        .menu h2 {
+        margin: -5px; /* Remove a margem do título */
+        font-size: 20px; /* Define o tamanho da fonte */
+        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+        }
+
+        .menu ul {
+        list-style: none; /* Remove os marcadores da lista */
+        margin: 0; /* Remove margens */
+        padding: 0; /* Remove preenchimentos */
+        display: flex; /* Exibe os itens horizontalmente */
+        }
+
+        .menu ul li {
+        padding: 45px; /* Adiciona espaçamento entre os itens do menu */
+        }
+
+        .menu ul li a {
+        color: white; /* Define a cor do texto */
+        text-decoration: none; /* Remove sublinhado dos links */
+        }

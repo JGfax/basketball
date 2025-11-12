@@ -9,8 +9,20 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
 <head>
   <meta charset="UTF-8">
   <title>Lista de Atletas</title>
+  <link rel="stylesheet" href="listar.css">
 </head>
 <body>
+
+  
+<!-- MENU HAMBURGUER-->
+
+          <nav class="menu">
+                    <ul>
+                        <li><a href="index.php">Cadastro &nbsp |</a></li>
+                    </ul>
+              </nav>
+<br>
+
   <h2>Atletas cadastrados</h2>
 
   <table border="1" cellpadding="8">
