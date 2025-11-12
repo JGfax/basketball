@@ -31,20 +31,6 @@ $result = $conn->query($sql);
 
 </header>
 
-        <script>
-            const menu = document.getElementById("mobileMenu");
-
-                function toggleMenu() {
-                menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-                }
-
-                window.addEventListener("resize", () => {
-                    if (window.innerWidth > 768) {
-                        menu.style.display = "none";
-                    }
-                }
-                );
-        </script>
 
 
   <!-- Formulário de login -->

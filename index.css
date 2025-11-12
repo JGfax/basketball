@@ -50,7 +50,7 @@ a:hover {
 }
 
 label {
-    display: inline-flex;
+    display: absolute;
     color: var(--cor-fundo-claro);
     padding: 10px;
     border-radius: 10px 0px 0px 10px;
@@ -105,7 +105,7 @@ button {
 
 
 .menu {
-        background-color: rgb(64, 121, 0); /* Cor de fundo escura */
+        background-color: var(--cor-destaque); /* Cor de fundo escura */
         padding: 10px 30px; /* Espaçamento interno */
         display: flex; /* Usa flexbox para alinhar os elementos */
         justify-content: space-between; /* Espaça os elementos ao longo do eixo principal */
