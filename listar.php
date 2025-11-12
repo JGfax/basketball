@@ -1,7 +1,11 @@
 <?php
 include 'conexao.php'; // Inclui a conexão
 
-$result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os usuários
+// Consulta para obter todos os atletas com os nomes das equipes
+$sql = "SELECT atletas.id, atletas.id_equipe, atletas.nome, atletas.pontos, atletas.assistencias, atletas.rebotes, equipes.nome AS nome_equipe 
+        FROM atletas 
+        LEFT JOIN equipes ON atletas.id_equipe = equipes.id_equipe";
+$result = $conn->query($sql); 
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +32,8 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
   <table border="1" cellpadding="8">
     <tr>
       <th>ID Atleta</th>
+      <th>ID Equipe</th>
+      <th>Equipe</th>
       <th>Nome</th>
       <th>Pontuação</th>
       <th>Assistências</th>
@@ -39,6 +45,8 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
     <?php while ($row = $result->fetch_assoc()) { ?>
       <tr>
         <td><?= $row['id'] ?></td>
+        <td><?= $row['id_equipe'] ?></td>
+        <td><?= htmlspecialchars($row['nome_equipe']) ?></td>
         <td><?= htmlspecialchars($row['nome']) ?></td>
         <td><?= htmlspecialchars($row['pontos']) ?></td>
         <td><?= htmlspecialchars($row['assistencias']) ?></td>
@@ -56,4 +64,5 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
   </table>
 </body>
 </html>
-
+```
+        
