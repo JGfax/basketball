@@ -20,3 +20,5 @@ if ($nome && $pontos !== null && $assistencias !== null && $rebotes !== null) {
     echo "Todos os campos são obrigatórios.";
 }
 ?>
+
+.

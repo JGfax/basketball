@@ -40,3 +40,5 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
   </table>
 </body>
 </html>
+
+.

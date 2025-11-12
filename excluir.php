@@ -21,3 +21,5 @@ if (isset($_GET['id'])) {
 // Fecha a conexão
 $conn->close();
 ?>
+
+.
