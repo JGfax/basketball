@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $atletas = $result->fetch_assoc();
+        $atleta = $result->fetch_assoc();
     } else {
         echo "Atleta não encontrado.";
         exit;
@@ -24,22 +24,44 @@ if (isset($_GET['id'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Atleta</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <nav class="menu">
+    <ul>
+      <li><a href="listar.php">Voltar para a Lista</a></li>
+    </ul>
+  </nav>
+</header>
+<br><br>
+
+<h2>Editar Atleta</h2>
+
 <!-- Formulário de edição -->
 <form action="atualizar.php" method="POST">
-    <input type="hidden" name="id" value="<?= $atletas['id'] ?>" />
-    <label>jogador:</label><br>
-    <input type="text" name="nome" value="<?= htmlspecialchars($atletas['nome']) ?>" required><br><br>
+    <input type="hidden" name="id" value="<?= $atleta['id'] ?>" />
+    
+    <label>Jogador:</label><br>
+    <input type="text" name="nome" value="<?= htmlspecialchars($atleta['nome']) ?>" required><br><br>
 
     <label>Pontuação:</label><br>
-    <input type="number" name="pontos" value="<?= htmlspecialchars($atletas['pontos']) ?>" required><br><br>
+    <input type="number" name="pontos" value="<?= htmlspecialchars($atleta['pontos']) ?>" required><br><br>
 
     <label>Assistência:</label><br>
-    <input type="number" name="assistencias" value="<?= htmlspecialchars($atletas['assistencias']) ?>" required><br><br>
+    <input type="number" name="assistencias" value="<?= htmlspecialchars($atleta['assistencias']) ?>" required><br><br>
 
     <label>Rebotes:</label><br>
-    <input type="number" name="rebotes" value="<?= htmlspecialchars($atletas['rebotes']) ?>" required><br><br>
+    <input type="number" name="rebotes" value="<?= htmlspecialchars($atleta['rebotes']) ?>" required><br><br>
 
     <button type="submit">Atualizar</button>
 </form>
 
-.
+</body>
+</html>
