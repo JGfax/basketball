@@ -5,12 +5,14 @@ include 'conexao.php'; // Inclui a conexão
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
     $id = $_POST['id'];
     $nome = $_POST['nome'];
-    $email = $_POST['email'];
+    $pontos = $_POST['pontos'];
+    $assistencias = $_POST['assistencias'];
+    $rebotes = $_POST['rebotes'];
 
     // Atualiza os dados do cliente no banco
-    $sql = "UPDATE usuario SET nome = ?, email = ? WHERE id = ?";
+    $sql = "UPDATE atletas SET nome = ?, pontos = ? assistencias = ? rebotes = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $nome, $email, $id);
+    $stmt->bind_param("ssi", $nome, $pontos, $assistencias, $rebotes);
 
     if ($stmt->execute()) {
         echo "Dados atualizados com sucesso!";

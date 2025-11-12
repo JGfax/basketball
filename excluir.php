@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = (int) $_GET['id']; // Certifica-se de que é um número inteiro
 
     // Excluir o usuário do banco de dados
-    $sql = "DELETE FROM usuario WHERE id = ?";
+    $sql = "DELETE FROM atletas WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
 

@@ -2,7 +2,7 @@
 include 'conexao.php';
 
 // Busca os serviços do banco
-$sql = "SELECT id_servico, nome_servico FROM servicos ORDER BY nome_servico";
+$sql = "SELECT id_equipe, nome FROM equipes ORDER BY nome";
 $result = $conn->query($sql);
 ?>
 
@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 
           <div class="logo">BASKET<span>BALL</span></div>
   
-<!-- MENU HAMBURGUE-->
+<!-- MENU HAMBURGUER-->
 
           <nav class="menu">
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -68,21 +68,21 @@ $result = $conn->query($sql);
     <label>Equipe:</label><br>
     <select id="equipe" name="equipe" required> 
        <?php while ($row = $result->fetch_assoc()): ?>                   <!-- Loop para preencher as opções do select -->
-                    <option value="<?= $row['id_servico'] ?>">           <!-- apresentar o valor da option -->
-                        <?= htmlspecialchars($row['nome_servico']) ?>    <!-- Exibição do texto na option, de forma automatizada -->
+                    <option value="<?= $row['id_equipe'] ?>">           <!-- apresentar o valor da option -->
+                        <?= htmlspecialchars($row['nome']) ?>    <!-- Exibição do texto na option, de forma automatizada -->
                     </option>
                   <?php endwhile; ?>
-    </select>
+    </select> <br>
 
     
     <label>Jogador:</label><br>
-    <input type="text" name="jogador" required><br>
+    <input type="text" id="nome" name="nome" required><br>
 
     <label>Pontos por partida:</label><br>
     <input type="number" name="pontos" required><br>
 
      <label>Assistência por partida:</label><br>
-    <input type="number" name="assistencia" required><br>
+    <input type="number" name="assistencias" required><br>
 
      <label>Rebotes por partida:</label><br>
     <input type="number" name="rebotes" required><br>

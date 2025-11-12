@@ -1,18 +1,17 @@
 <?php
-$host = 'localhost';     // Servidor
-$usuario = 'root';       // Usuário padrão do XAMPP
-$senha = 'Home@spSENAI2025!';
-$banco = 'biblioteca';    // Nome do banco
-
-// Cria conexão
-$conn = new mysqli($host, $usuario, $senha, $banco);
-
-// Verifica se ocorreu erro
-if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
+// db.php
+$host = 'localhost';
+$db   = 'basketball';
+$user = 'root';
+$pass = 'Home@spSENAI2025!';
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
+try {
+  $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+  die("DB connection failed: " . $e->getMessage());
 }
-
-// Caso queira exibir confirmação (teste)
-echo "Conectado com sucesso!";
-?>
-

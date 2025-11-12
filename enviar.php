@@ -2,24 +2,30 @@
 include 'conexao.php'; // Inclui a conexão
 
 // Captura os dados enviados pelo formulário
-$nome = $_POST['nome'];
-$senha = $_POST['senha']; // A senha deve ser tratada antes de ser salva
-$email = $_POST['email'];
+$nome = $_POST['nome'] ?? null;
+$pontos = $_POST['pontos'] ?? null;
+$assistencias = $_POST['assistencias'] ?? null;
+$rebotes = $_POST['rebotes'] ?? null;
 
-// Usa password_hash para garantir que a senha seja segura
-$senhaHash = password_hash($senha, PASSWORD_BCRYPT);
 
-// Monta e executa o INSERT com prepared statements para evitar SQL Injection
-$sql = "INSERT INTO usuario (nome, senha, email) VALUES (?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $nome, $senhaHash, $email);
+if ($nome && $pontos !== null && $assistencias !== null && $rebotes !== null) {
+    $sql = "INSERT INTO atletas (nome, pontos, assistencias, rebotes) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("siii", $nome, $pontos, $assistencias, $rebotes);
 
-if ($stmt->execute()) {
-    echo "Usuário cadastrado com sucesso!";
-    header('Location: listar.php'); // Redireciona para a lista de usuários
+
+    if ($stmt->execute()) {
+        echo "Usuário cadastrado com sucesso!";
+        // header('Location: listar.php'); // Redireciona para a lista de usuários
+    } else {
+        echo "Erro ao cadastrar: " . $stmt->error;
+    }
+
+    $stmt->close();
 } else {
-    echo "Erro ao cadastrar: " . $stmt->error;
+    echo "Todos os campos são obrigatórios.";
 }
 
 $conn->close();
+
 ?>
