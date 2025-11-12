@@ -39,7 +39,7 @@ $logo_map = [
 
 
 <form action="enviar.php" method="POST">
-<h2>FCadastro de atletas</h2>
+<h2>Cadastro de atletas</h2>
 
   <label>Equipe:</label><br>
   <div class="custom-select-wrapper">
