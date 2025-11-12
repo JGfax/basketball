@@ -1,0 +1,92 @@
+:root {
+  --cor-fundo-claro: #ffffffff;    /* Cinza claro, ideal para fundos de página */
+  --cor-texto-escuro: #252601;   /* Verde super escuro, para texto principal */
+  --cor-primaria: #4F7302;       /* Verde oliva, para títulos e elementos primários */
+  --cor-destaque: #84BF04;       /* Verde limão, para botões, links e chamadas de ação (CTA) */
+  --cor-secundaria: #BABF2A;     /* Verde amarelado, para detalhes, bordas ou alertas */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 100vw;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+section {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+h1, h2, h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+label {
+    display: inline-flex;
+    color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    border-radius: 10px;
+    color: var(--cor-texto-escuro);
+    background-color: white;
+    outline: none; 
+    border: 2px solid var(--cor-primaria);
+    padding: 10px;
+}
+form {
+    border-radius: 16px;
+    padding: 30px;
+    background: rgba(217, 214, 208, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 90px;
+}
