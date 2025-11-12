@@ -1,9 +1,9 @@
 :root {
   --cor-fundo-claro: #ffffffff;    /* Cinza claro, ideal para fundos de página */
-  --cor-texto-escuro: #252601;   /* Verde super escuro, para texto principal */
-  --cor-primaria: #4F7302;       /* Verde oliva, para títulos e elementos primários */
-  --cor-destaque: #84BF04;       /* Verde limão, para botões, links e chamadas de ação (CTA) */
-  --cor-secundaria: #BABF2A;     /* Verde amarelado, para detalhes, bordas ou alertas */
+  --cor-texto-escuro: #040024;   /* Verde super escuro, para texto principal */
+  --cor-primaria: #1f469c;       /* Verde oliva, para títulos e elementos primários */
+  --cor-destaque: #5b0097;       /* Verde limão, para botões, links e chamadas de ação (CTA) */
+  --cor-secundaria: #f73e41;     /* Verde amarelado, para detalhes, bordas ou alertas */
 }
 * {
   box-sizing: border-box;
@@ -55,38 +55,42 @@ a:hover {
 
 label {
     display: inline-flex;
-    color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
     padding: 10px;
     border-radius: 10px 0px 0px 10px;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="number"]{
     border-radius: 10px;
     color: var(--cor-texto-escuro);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     outline: none; 
     border: 2px solid var(--cor-primaria);
-    padding: 10px;
+    padding: 30px;
+    width: 700px;
 }
 form {
     border-radius: 16px;
-    padding: 30px;
-    background: rgba(217, 214, 208, 0.3);
+    padding: 50px;
+    background:var(--cor-primaria);
     border-radius: 16px;
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 600px;
 }
 
 button {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
     color: var(--cor-fundo-claro);
     border: none;
-    padding: 10px 20px;
+    padding: 30px 50px;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    margin-left: 90px;
+    margin-left: 130px;
+    margin-top: 50px;
+    width: 450px;
 }
