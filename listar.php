@@ -15,14 +15,14 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
 
   
 <!-- MENU HAMBURGUER-->
-
-          <nav class="menu">
-                    <ul>
-                        <li><a href="index.php">Cadastro de Atletas</a></li>
-                    </ul>
-              </nav>
-<br>
-
+<header>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.php">Cadastro de atletas &nbsp |</a></li>
+    </ul>
+  </nav>
+</header>
+<br><br>
   <h2>Atletas cadastrados</h2>
 
   <table border="1" cellpadding="8">
@@ -32,6 +32,8 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
       <th>Pontuação</th>
       <th>Assistências</th>
       <th>Rebotes</th>
+      <th>Editar</th>
+      <th>Excluir</th>
     </tr>
 
     <?php while ($row = $result->fetch_assoc()) { ?>
@@ -43,7 +45,9 @@ $result = $conn->query("SELECT * FROM atletas"); // Consulta para obter todos os
         <td><?= htmlspecialchars($row['rebotes']) ?></td>
         <td>
           <!-- Link para editar -->
-         <a href="editar.php?id=<?= $row['id'] ?>" onclick="return confirm('Tem certeza que deseja editar')">Editar</a>
+          <a href="editar.php?id=<?= $row['id'] ?>" onclick="return confirm('Tem certeza que deseja editar')">Editar</a>
+          </td>
+        <td>
           <!-- Link para excluir -->
           <a href="excluir.php?id=<?= $row['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
         </td>

@@ -11,20 +11,33 @@
   padding: 0;
   user-select: none;
 }
+
 body {
   
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-image: url("image/Fundo.webp");
+    background-position: center;
+    background-size: cover;
 }
+
 .menu {
-       background-color: var(--cor-destaque); /* Cor de fundo escura */
-        padding: 10px 30px; /* Espaçamento interno */
+        background-color: var(--cor-destaque); /* Cor de fundo escura */
+        padding: 5px 5px; /* Espaçamento interno */
         display: flex; /* Usa flexbox para alinhar os elementos */
         justify-content: space-between; /* Espaça os elementos ao longo do eixo principal */
         align-items: center; /* Alinha verticalmente os itens */
+        color: white; /* Cor do texto */
         width: 100%; /* Faz o menu ocupar toda a largura da tela */
-        margin-top: -45px;
-        margin-left: -10px;
+        margin-top: -420px;
         }
+    
+
         .menu ul {
         list-style: none; /* Remove os marcadores da lista */
         margin: 0; /* Remove margens */
@@ -37,19 +50,39 @@ body {
         }
 
         .menu ul li a {
-        color: white; /* Define a cor do texto */
+        color: var(--cor-fundo-claro); /* Define a cor do texto */
         text-decoration: none; /* Remove sublinhado dos links */
         font-size: large;
-  margin-left: -35px;
-  font-weight: bold;
- 
+        margin-left: -35px;
         }
 
+
 table {
-    width: 90%;
+    width: 95%;
+    height: 25%;
     margin: 50px auto;
     border-collapse: collapse;
-    box-shadow: 0 2px 15px rgba(64, 121, 0, 0.1);
+    box-shadow: 0 2px 15px rgba(255, 5, 5, 0.1);
+    border:var(--cor-destaque);
+    background-color:var(--cor-fundo-claro);
+    text-align: center;
 }
 
-    
+  h2{
+  font-size: 30px;
+  text-align: center;
+  color: var(--cor-fundo-claro);
+  }  
+
+  th{
+    background-color:#5b0097;
+    color:var(--cor-fundo-claro)
+  }
+  
+
+  
+a {
+  color: var(--cor-destaque);
+  font-weight: bold;
+
+}

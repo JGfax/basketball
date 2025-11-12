@@ -25,55 +25,7 @@ $logo_map = [
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="stylesheet" href="index.css">
-  <style>
-    .custom-select-wrapper {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 300px;
-    }
-    .custom-select {
-      position: relative;
-      cursor: pointer;
-      border: 1px solid #ccc;
-      padding: 8px 12px;
-      background-color: #fff;
-    }
-    .custom-select-trigger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .custom-options {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      z-index: 10;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-    .custom-option {
-      display: flex;
-      align-items: center;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    .custom-option:hover {
-      background-color: #f0f0f0;
-    }
-    .custom-option img {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
-    }
-    .custom-select.open .custom-options {
-      display: block;
-    }
-  </style>
+
 </head>
 <body> 
 
@@ -85,8 +37,9 @@ $logo_map = [
   </nav>
 </header>
 
-<h2>Formulário</h2>
+
 <form action="enviar.php" method="POST">
+<h2>FCadastro de atletas</h2>
 
   <label>Equipe:</label><br>
   <div class="custom-select-wrapper">
