@@ -143,8 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     options.forEach(option => {
         option.addEventListener('click', function () {
-            trigger.innerHTML = this.innerHTML;
+            trigger.textContent = this.querySelector('span').textContent;
             hiddenInput.value = this.dataset.value;
+            select.classList.remove('open');
         });
     });
 
